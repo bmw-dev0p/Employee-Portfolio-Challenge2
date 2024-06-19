@@ -132,7 +132,8 @@
   }
   
   .page-section > h2 {
-    flex: 0 0 20%;
+    /* changed flex-basis 20 -> 30% to add room for h2 words  */
+    flex: 0 0 30%;  
     text-align: right;
     padding-right: 15px;
     border-right: 4px solid var(--primary);
@@ -141,11 +142,13 @@
   }
   
   .page-section > div {
-    flex: 0 0 77%;
+    /* changed flex-basis 77 -> 67 to accomadate changes made to h2 words */
+    flex: 0 0 67%;
   }
   
   .page-section p {
     margin-bottom: 20px;
+    max-width: 77%;
   }
   
   .flex-container {
@@ -227,4 +230,23 @@
   /* TODO: add media query for a max-width of 980px */
   
   /* TODO: add media query for a max-width of 768px */
+
+  /* added CSS selectors for added elements */
+#aboutMe {
+  display: flex;
+  /* flex: 0 0 50%; */
+  flex-wrap: nowrap;
+
+}
+
+  #selfie {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* flex: 0 0 20%; */
+    max-width: 225px;
+    max-height: 225px;
+    border-radius: 50%;
+    border: 5px solid var(--secondary);
+  }
   
