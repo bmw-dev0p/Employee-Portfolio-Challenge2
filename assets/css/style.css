@@ -162,13 +162,15 @@
     background-color: var(--primary);
     color: var(--tertiary);
     min-height: 150px;
-    max-height: 150px;
+    /* removed max-height because I felt it was too small */
+    /* max-height: 150px; */
     flex-basis: calc(50% - 1em);
     display: flex;
     align-items: flex-end;
     padding: 0 0 20px 0;
     margin: 0.5em;
     text-decoration: none;
+    /* removed background blend for brighter images  */
     background-blend-mode: soft-light;
     background-size: 150%;
     transition: all 0.5s;
@@ -176,9 +178,10 @@
   }
   
   /* feature first portfolio item */
-  .flex-item:first-child {
+  /* Removed flex-basis  100 - wanted 2 items same size (side by side) for first flex-item (education)  */
+   .flex-item:first-child {
       min-height: 400px;
-      flex-basis: 100%;
+      /* flex-basis: 100%; */
   }
   
   .flex-item:hover {
@@ -187,7 +190,7 @@
   
   .flex-item div {
     background-color: var(--secondary);
-    padding: 8px 10px;
+    /* padding: 8px 10px; */
   }
   
   .flex-item h3 {
@@ -224,6 +227,23 @@
   
   /* portfolio project images */
   /* TODO: Add portfolio project images here*/
+  #UofR {
+    background-image: url(../images/UofR2.jpg);
+    /* wanted no repeat on images, but doesn't work for some reason */
+    background-repeat: no-repeats;
+  }
+
+  #Brightpoint {
+    background-image: url(../images/Brightpoint.jpg);
+  }
+
+  #skeeter {
+    background-image: url(../images/skeeter.png);
+  }
+
+  #HOC {
+    background-image: url(../images/HOC.jpg);
+  }
   
   /* media queries */
   
@@ -233,20 +253,27 @@
 
   /* added CSS selectors for added elements */
 #aboutMe {
-  display: flex;
-  /* flex: 0 0 50%; */
-  flex-wrap: nowrap;
+  padding-left: 10%;
 
 }
 
   #selfie {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    /* flex: 0 0 20%; */
     max-width: 225px;
     max-height: 225px;
     border-radius: 50%;
     border: 5px solid var(--secondary);
   }
+
+  .flex-container2 {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .school {
+    max-width: 100%;
+    max-height: 100%;
+    
+  }
+
+  
   
