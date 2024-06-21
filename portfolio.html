@@ -3,83 +3,112 @@
 
 <head>
 <!-- TODO: add head content below -->
- <title>Brad Webster Profile / Resume</title>
- <meta charset="utf-8">
- <link rel="stylesheet" href="./assets/css/style.css">
-
+    <title>Brad Webster Profile / Resume</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 <!-- TODO: add body content below -->
- <section id="top-banner">
+ <!-- header with navigation links in list format  -->
+ <section>
     <header>
         <h1>Brad Webster</h1>
         <nav>
             <ul>
-            <li><a>About Me</a></li>
-            <li><a>Education</a></li>
-            <li><a>Work Experience</a></li>
-            <li><a>Contact Me</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#work">Work Experience</a></li>
+            <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
     </header>
  </section>
 
+ <main>
+ <!-- name banner directly below header  -->
  <section class="hero-banner">
     <h2>Brad Webster</h2>
  </section>
 
- <section class="page-wrapper">
-    <section class="page-section">
-
+ <!-- main page with content  -->
+  <!-- "page-wrapper" is giant flexbox for all of content  -->
+ <section class="page-wrapper"> 
+    <!-- page-section is in a flex row with header on left, images on right  -->
+    <section class="page-section" id="aboutme">
         <h2>About Me</h2>
+        <!-- content on right side needs another inner flexbox to hold multiple custom items  -->
         <div class="flex-container2">
             <img id="selfie" src="assets/images/self.jpg" alt="selfie">
-            <aside><p id="aboutMe">This is sample text about me. This is sample text about me. This is sample text about me. This is sample text about me. This is sample text about me. This is sample text about me. </p></aside>
-            
+            <aside><p id="aboutMe">Hello my name is Brad Webster and I was born in 1993. I am a student software devolper studying at University of Richmond. My goal is to build a career in app development / video games. I graduated from John Tyler University in Richmond, VA (now Brightpoint College) in 2022. I majored in Information Technology with a minor in Programming. I have held various jobs through my education journey. Most recently, House of Carpet doing rug and runner fabrication work. It has taught me that I like to build things and take pride in my work. My favorite hobbies are going to the gym, skateboarding, and playing video games. My best attributes are discipline, integrity, and problem-solving. I like to adventure and I am looking forward to my next journey.</p></aside>
         </div>
     </section>
 
-    <section class="page-section">
+    <section class="page-section" id="education">
         <h2>Education</h2>
         <div class="flex-container">
             <div class="flex-item" id="Brightpoint">
-                <!-- originally tried code images in html directly - changed to CSS background-image -->
-                <!-- <img class="school" src="./assets/images/Brightpoint.jpg" alt="Brightpoint"> -->
+                <!-- originally tried code images in html directly - changed to CSS background-image as it was better fit (visible) -->
+                 <!-- since i need alt text for all images  (and screen-readers) , kept img tag with alt text but made invisible in CSS  -->
+                  <!-- found this work around online -->
+                <img class="sr-only" src="./assets/images/Brightpoint.jpg" alt="Brightpoint College Campus">
                 <div id="img-caption">
-                    <h3>caption</h3>
+                    <h3>Brightpoint College</h3>
+                    <p>Associate's Degree: Information Technology, Programming Career Certificate (minor)</p>
                 </div>
             </div>
             <div class="flex-item" id="UofR">
-                <!-- <img class="school" src="./assets/images/UofR2.jpg" alt="URichmond"> -->
-
-                <!-- seperate div for image caption -->
+                <img class="sr-only" src="./assets/images/UofR2.jpg" alt="U of Richmond Campus">
+                <!-- seperate div to hold image caption (overlay), same as above -->
                  <div id="img-caption">
-                    <h3>caption</h3>
+                    <h3>University of Richmond</h3>
+                    <p>EdX Software Development Bootcamp</p>
                 </div>
             </div>
         </div>
         
     </section>
 
-    <!-- copied formatting from education section -->
-    <section class="page-section">
+    <!-- work experience: exact same formatting from education section -->
+    <section class="page-section" id="work">
         <h2>Work Experience</h2>
         <div class="flex-container">
             <div class="flex-item" id="skeeter">
+                <img class="sr-only" src="assets/images/skeeter.png" alt="pest control truck">
                 <div id="img-caption">
-                    <h3>caption</h3>
+                    <h3>Mosquito Authority</h3>
+                    <p>Certified Pest Control: 2015-2018</p>
                 </div>
             </div>
             <div class="flex-item" id="HOC">
+                <img class="sr-only" src="./assets/images/HOC.jpg" alt="Carpet runner on stairs">
                  <div id="img-caption">
-                    <h3>caption</h3>
+                    <h3>House of Carpet</h3>
+                    <p>Rug/Runner Fabrication: 2019-Present</p>
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    
+        <!-- contact section -->
+    <section class="page-section" id="contact">
+        <h2>Contact Me</h2>
+        <!-- another inner flexbox for contact items  -->
+        <div class="flex-container">
+        <!-- specific class for styling contact links (and address)  -->
+            <div class="contact">
+                <address>
+                    <a id="github" href="https://github.com/bmw-dev0p">Github Portfolio</a>
+                    <a id="email" href="mailto:bmw.dev0p@gmail.com">Email me</a>
+                    <!-- added phone number as hyperlink to keep same styling for all items in contact -->
+                     <!-- didnt fill out actual phone number for privacy  -->
+                    <a id="phone">804-277-****</a>
+                </address>
+            </div>
+        </div>
+    </section>
+</main>
 
 </body>
 
